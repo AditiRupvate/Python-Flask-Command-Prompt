@@ -3,5 +3,17 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def hello():
-    return "Hello Worlddddddddddddddd!"
+@app.route('/home')
+def Home():
+    html= ''' 
+    <p>hello</p>
+    <a href="/about"> about </a>
+    
+    '''
+    return html
+   
+
+
+@app.route('/about')
+def About():
+    return "About us"
